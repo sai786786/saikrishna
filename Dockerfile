@@ -1,4 +1,4 @@
 FROM nginx
 COPY index.html /usr/share/nginx/html
-ports:
+PORTS:
    - "80:80"
