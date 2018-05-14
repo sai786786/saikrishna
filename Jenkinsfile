@@ -10,7 +10,7 @@ pipeline {
                 sh 'ls'
             }
         }
-        stage('automate'){
+        stages('automate'){
         node ('master'){
     def app
 
