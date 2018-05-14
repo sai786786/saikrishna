@@ -3,6 +3,9 @@ pipeline {
     stages {
     
         stage('Test') {
+            agent {
+                label 'HYD'
+}
             steps {
                 sh 'ls'
             }
