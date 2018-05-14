@@ -8,12 +8,16 @@ pipeline {
 }
             steps {
                 sh 'ls'
-                def app
+                
             }
         }
        
        
-       
+        def app{
+        steps {
+                app = docker.build("saikiran786/ravana") 
+            }
+        }
 
         stage('Test on Windows') {
             agent {
