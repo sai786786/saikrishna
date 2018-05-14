@@ -11,7 +11,7 @@ pipeline {
                 sh 'docker build -t saikiran786/ravana .'
                 sh 'docker tag ravana saikiran786/ravana:$BUILD_ID'
                 sh 'docker push saikiran786/ravana:$BUILD_ID'
-                
+                sh 'docker push saikiran786/ravana:latest'
             }
         }
        
@@ -23,7 +23,7 @@ pipeline {
                 label 'HYD'
             }
             steps {
-                sh 'ls' 
+                sh 'docker pull saikiran786/ravana'
             }
     }
    }
