@@ -8,16 +8,10 @@ pipeline {
 }
             steps {
                 sh 'ls'
+                sh 'docker build -t ravana .'
             }
         }
-        stage('def-app'){
-        agent {
-                label 'master'
-}
-            steps {
-                def app
-            }
-        }
+       
        
 
         stage('Test on Windows') {
