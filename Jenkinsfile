@@ -13,6 +13,14 @@ pipeline {
             }
         }
        
+        stage('DEPLOY') {
+            agent {
+                label 'master'
+            }
+            steps {
+                sh 'docker push saikiran786/ravana:$BUID_ID' 
+            }
+    }
        
 
         stage('Test on Windows') {
