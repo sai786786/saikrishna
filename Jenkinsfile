@@ -24,6 +24,7 @@ pipeline {
             }
             steps {
                 sh 'docker pull saikiran786/ravana'
+                sh 'docker run -i -t --name var -p 8484:3000 saikiran786/ravana node app.js'
             }
     }
    }
