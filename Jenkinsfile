@@ -4,10 +4,18 @@ pipeline {
     
         stage('Test') {
             agent {
-                label 'HYD'
+                label 'master'
 }
             steps {
                 sh 'ls'
+            }
+        }
+        stage('def-app'){
+        agent {
+                label 'master'
+}
+            steps {
+                def app
             }
         }
        
