@@ -10,6 +10,7 @@ pipeline {
                 sh 'ls'
             }
         }
+        stage('automate'){
         node ('master'){
     def app
 
@@ -47,6 +48,7 @@ pipeline {
         }
     }
 }
+        }
         stage('Test on Windows') {
             agent {
                 label 'HYD'
