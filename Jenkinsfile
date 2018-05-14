@@ -9,6 +9,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'docker build -t ravana .'
+                sh 'docker tag ravana saikiran786/ravana:$BUILD_ID'
             }
         }
        
