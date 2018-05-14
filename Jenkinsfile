@@ -15,11 +15,7 @@ pipeline {
         }
        
        
-        def app{
-        steps {
-                app = docker.build("saikiran786/ravana") 
-            }
-        }
+        
 
         stage('Test on Windows') {
             agent {
