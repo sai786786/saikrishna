@@ -8,8 +8,8 @@ pipeline {
 }
             steps {
                 sh 'ls'
-                sh 'docker build -t saikiran786/ravana:${env.BUILD_NUMBER}'
-                sh 'docker push saikiran786("${env.BUILD_NUMBER}")'
+                sh 'docker build -t saikiran786/ravana:$BUID_ID'
+                sh 'docker push saikiran786/ravana:$BUILD_ID'
                 
             }
         }
