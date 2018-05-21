@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'docker build -t saikiran786/ravana .'
-                sh 'docker tag ravana saikiran786/ravana:$BUILD_ID'
+                sh 'docker tag saikiran786/ravana saikiran786/ravana:$BUILD_ID'
                 sh 'docker push saikiran786/ravana:$BUILD_ID'
                 sh 'docker push saikiran786/ravana:latest'
             }
