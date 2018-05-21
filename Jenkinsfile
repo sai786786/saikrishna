@@ -21,7 +21,7 @@ pipeline {
         }
              
         steps {
-                sh 'ls'
+               sh 'ls'
         }
 
         stage('Test on Windows') {
