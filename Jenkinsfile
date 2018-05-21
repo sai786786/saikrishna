@@ -1,10 +1,11 @@
 pipeline {
-    agent none
+    agent {
+        node{
+    
     stages {
     
         stage('Test') {
-            agent {
-                node{                
+                          
 
             steps {
                 sh 'ls'
@@ -14,8 +15,7 @@ pipeline {
                 sh 'docker push saikiran786/ravana:latest'
             }
         }
-       
-            }       
+             
         
 
         stage('Test on Windows') {
@@ -29,4 +29,5 @@ pipeline {
     }
    }
 }
-  
+    }
+}
