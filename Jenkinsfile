@@ -4,8 +4,8 @@ pipeline {
     
         stage('Test') {
             agent {
-                label "whatever"                
-}
+                node{                
+
             steps {
                 sh 'ls'
                 sh 'docker build -t saikiran786/ravana .'
@@ -15,7 +15,7 @@ pipeline {
             }
         }
        
-       
+            }       
         
 
         stage('Test on Windows') {
