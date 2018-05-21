@@ -19,11 +19,11 @@ pipeline {
                 sh 'docker push saikiran786/ravana:latest'
             }
         }
-             
+           stage('Test123') {  
         steps {
                sh 'ls'
         }
-
+           }
         stage('Test on Windows') {
             agent {
                 label 'new_hyd_21_05_18'
