@@ -24,6 +24,12 @@ pipeline {
                sh 'ls'
         }
            }
+        stage('working_group') {  
+        steps {
+               sh 'echo "Yes tis Script is Working"'
+        }
+           }
+        
         stage('Test on Windows') {
             agent {
                 label 'new_hyd_21_05_18'
