@@ -23,7 +23,7 @@ pipeline {
 
         stage('Test on Windows') {
             agent {
-                label 'HYD'
+                label 'new_hyd_21_05_18'
             }
             steps {
                 sh 'ls'
