@@ -3,8 +3,8 @@ pipeline {
     stages {
     
         stage('Test') {
-            agent any {
-                
+            agent {
+                label "whatever"                
 }
             steps {
                 sh 'ls'
